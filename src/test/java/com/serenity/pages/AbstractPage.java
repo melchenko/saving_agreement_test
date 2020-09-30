@@ -15,7 +15,7 @@ public abstract class AbstractPage extends PageObject{
 
     protected Header header;
     protected Footer footer;
-    private static final String FIELD_NAME_XPATH = "//div//*[@id='%s']";
+    private static final String FIELD_NAME_XPATH = "//div//*[contains(@id, '%s')]";
     private static final String BUTTON_XPATH = "//button[contains(@class, 'btn') and contains(@name, '%s')]";
     private static final String DROPDOWN_MENU_XPATH = "//span[contains(text(), '%s')]";
     private static final String DROPDOWN_INPUT_XPATH = "//span/input[@class='select2-search__field']";
