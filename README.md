@@ -1,6 +1,6 @@
 # Automation test framework
 
-**BDD automation test framework**  - Check the correct saving agreement on Experior Financial Group Portal is covered by automation scripts. 
+**BDD automation test framework**  - Check the correct saving agreement for Experior Financial Group Portal is covered by automation scripts. 
 
 Table of contents
 =================
