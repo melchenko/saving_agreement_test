@@ -4,6 +4,7 @@ import com.serenity.steps.serenity.EndUserSteps;
 import net.thucydides.core.annotations.Steps;
 import org.apache.log4j.Logger;
 import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
 public class DefinitionSteps {
@@ -25,6 +26,7 @@ public class DefinitionSteps {
     }
 
     @Given("the user is on the Agreement Insurance Page")
+    @When("the user is on the Agreement Insurance Page")
     public void givenTheUserIsOnTheAgreementInsurancePage() {
         endUser.is_the_agreement_insurance_page();
         log.info("the user is on the the user is on the Agreement Insurance Page");
@@ -39,7 +41,25 @@ public class DefinitionSteps {
     @When("the user click on '$fieldName' and choose '$text'")
     public void whenTheUserClickOnDropdownAndChoseText(String fieldName, String text) {
         endUser.clickOnAndChoose(fieldName, text);
-        log.info(String.format("the user click on %1$s and input %2$s", fieldName, text));
+        log.info(String.format("the user click on %1$s and choose %2$s", fieldName, text));
+    }
+
+    @When("the user toggle On checkbox '$checkboxName'")
+    public void whenTheUserToggleOnCheckbox(String checkboxName) {
+        endUser.toggleOnCheckbox(checkboxName);
+        log.info(String.format("the user toggle on checkbox %s", checkboxName));
+    }
+
+    @When("the user choose '$choice' for '$radioName'")
+    public void whenTheUserChooseRadioButton(String choice, String radioName) {
+        endUser.chooseRadioButton(choice, radioName);
+        log.info(String.format("the user choose %1$s for %2$s", choice, radioName));
+    }
+
+    @When("the user upload '$namePath' to '$nameForm' form")
+    public void whenTheUserUploadFile(String namePath, String nameForm) {
+        endUser.uploadFileToForm(namePath, nameForm);
+        log.info(String.format("the user upload file from %1$s to %2$s", namePath, nameForm));
     }
 
     @When("the user click on the '$buttonName' button")
@@ -47,4 +67,11 @@ public class DefinitionSteps {
         endUser.clickOnButton(buttonName);
         log.info(String.format("the user click on %s button", buttonName));
     }
+
+    @Then("they should see '$someText'")
+    public void theyShouldSeeSomeText(String someText) {
+        endUser.shouldSeeSomeText(someText);
+        log.info(String.format("they see %s", someText));
+    }
+
 }

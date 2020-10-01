@@ -21,8 +21,7 @@ public class WebDriverFactory implements DriverSource {
         if (driver == null) {
             switch (driverName) {
                 case ("chrome"):
-                    WebDriverManager.chromedriver().version("85").setup();
-//                    WebDriverManager.chromedriver().avoidPreferences().avoidAutoVersion().setup();
+                    WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--disable-infobars", "--disable-extensions");
                     driver = new ChromeDriver(options);

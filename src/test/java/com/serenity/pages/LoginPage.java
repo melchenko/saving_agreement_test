@@ -1,6 +1,5 @@
 package com.serenity.pages;
 
-import com.serenity.pages.components.SignIn;
 import lombok.Getter;
 import net.thucydides.core.annotations.DefaultUrl;
 
