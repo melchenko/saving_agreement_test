@@ -24,7 +24,7 @@ Table of contents
 ## Test scenario example
 
 ```java
-Scenario: CHECK THE CORRECT SAVING AGREEMENT FOR LIFE, CRITICAL AND DISABILITY INSURANCE
+Scenario: CHECK THE CORRECTNESS OF SAVING THE AGREEMENT FOR LIFE, CRITICAL AND DISABILITY INSURANCE
 Given the user is on the Agreement Insurance Page
 And the user clicks 'Please, select advisor' and choose 'Automation'
 And the user toggles checkbox 'This is an Electronic application'

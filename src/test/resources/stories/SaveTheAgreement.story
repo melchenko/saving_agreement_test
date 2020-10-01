@@ -6,7 +6,7 @@ As a user
 I want to perform an action
 So that I can achieve a business goal
 
-Scenario: CHECK THE CORRECT SAVING AGREEMENT FOR LIFE, CRITICAL AND DISABILITY INSURANCE
+Scenario: CHECK THE CORRECTNESS OF SAVING THE AGREEMENT FOR LIFE, CRITICAL AND DISABILITY INSURANCE
 
 Given the user is on the EXPERIOR FINANCIAL GROUP Inc Home Page
 And the user is on the login Page
