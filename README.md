@@ -1,6 +1,6 @@
 # Automation test framework
 
-**BDD automation test framework**  - Check the correct saving agreement for Experior Financial Group Portal is covered by automation scripts. 
+**BDD automation test framework**  - Validation of the agreement saving correctness for Experior Financial Group Portal is covered by automation scripts. 
 
 Table of contents
 =================
@@ -25,23 +25,20 @@ Table of contents
 
 ```java
 Scenario: CHECK THE CORRECT SAVING AGREEMENT FOR LIFE, CRITICAL AND DISABILITY INSURANCE
-Given the user is on the EXPERIOR FINANCIAL GROUP Inc Home Page
-When the user click on 'email' and input 'automation@gmail.com'
-And the user click on 'password' and input '-fXIGf'
-And the user click on the 'Login' button
-And the user is on the Agreement Insurance Page
-And the user click on 'Please, select advisor' and choose 'Automation'
+Given the user is on the Agreement Insurance Page
+And the user clicks 'Please, select advisor' and choose 'Automation'
+And the user toggles checkbox 'This is an Electronic application'
+And the user chooses 'No' for 'Will this policy replace another policy?'
 ```
 
 ## Test step example
 
 ```java
-    @When("the user click on '$fieldName' and input '$text'")
-    public void whenTheUserClickOnFieldAndInputText(String fieldName, String text) {
-        endUser.clickOnAndInput(fieldName, text);
-        log.info(String.format("the user click on %1$s and input %2$s", fieldName, text));
+    @When("the user clicks the '$buttonName' button")
+    public void whenTheUserClicksButton(String buttonName) {
+        endUser.clicksButton(buttonName);
+        log.info(String.format("the user clicks %s button", buttonName));
     }
-
 ```
 
 ## Test runner
@@ -53,7 +50,7 @@ public class AcceptanceTestSuite extends SerenityStories {
     public AcceptanceTestSuite() {
         configuration = super.getSystemConfiguration();
         configuration.setIfUndefined(WEBDRIVER_DRIVER.getPropertyName(), "provided");
-        configuration.setIfUndefined(WEBDRIVER_BASE_URL.getPropertyName(), "http://kuopassa.net/litecart/en/");
+        configuration.setIfUndefined(WEBDRIVER_BASE_URL.getPropertyName(), "https://dev.advisor.efgroup.ca");
         configuration.setIfUndefined(WEBDRIVER_PROVIDED_TYPE.getPropertyName(), "mydriver");
         configuration.setIfUndefined("webdriver.provided.mydriver", "drivers.WebDriverFactory");
     }
@@ -65,8 +62,8 @@ public class AcceptanceTestSuite extends SerenityStories {
  * Possible to select browser (Chrome or FireFox) by cucumber options (ex. -Ddriver="firefox") - Chrome by default
  
 ```bash
-   'mvn clean test' - will run all tests
+   'mvn clean verify' - will run all tests
    'mvn serenity:aggregate' - for generate Serenity test report
 ```
 ## Report
- * Report is located in target/cucumber/index.html
+ * Report is located in target/site/serenity/index.html

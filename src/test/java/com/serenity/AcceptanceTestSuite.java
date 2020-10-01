@@ -17,9 +17,8 @@ public class AcceptanceTestSuite extends SerenityStories {
     public AcceptanceTestSuite() {
         configuration = super.getSystemConfiguration();
         configuration.setIfUndefined(WEBDRIVER_DRIVER.getPropertyName(), "provided");
-        configuration.setIfUndefined(WEBDRIVER_BASE_URL.getPropertyName(), "http://kuopassa.net/litecart/en/");
+        configuration.setIfUndefined(WEBDRIVER_BASE_URL.getPropertyName(), "https://dev.advisor.efgroup.ca");
         configuration.setIfUndefined(WEBDRIVER_PROVIDED_TYPE.getPropertyName(), "mydriver");
         configuration.setIfUndefined("webdriver.provided.mydriver", "drivers.WebDriverFactory");
-//        configuration.setIfUndefined(THUCYDIDES_ONLY_SAVE_FAILING_SCREENSHOTS.getPropertyName(), "true");
     }
 }

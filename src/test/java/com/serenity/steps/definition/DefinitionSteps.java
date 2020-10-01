@@ -32,40 +32,40 @@ public class DefinitionSteps {
         log.info("the user is on the the user is on the Agreement Insurance Page");
     }
 
-    @When("the user click on '$fieldName' and input '$text'")
-    public void whenTheUserClickOnFieldAndInputText(String fieldName, String text) {
-        endUser.clickOnAndInput(fieldName, text);
-        log.info(String.format("the user click on %1$s and input %2$s", fieldName, text));
+    @When("the user clicks '$fieldName' and inputs '$text'")
+    public void whenTheUserClicksFieldAndInputsText(String fieldName, String text) {
+        endUser.clicksAndInputs(fieldName, text);
+        log.info(String.format("the user clicks %1$s and inputs %2$s", fieldName, text));
     }
 
-    @When("the user click on '$fieldName' and choose '$text'")
-    public void whenTheUserClickOnDropdownAndChoseText(String fieldName, String text) {
-        endUser.clickOnAndChoose(fieldName, text);
-        log.info(String.format("the user click on %1$s and choose %2$s", fieldName, text));
+    @When("the user clicks '$fieldName' and chooses '$text'")
+    public void whenTheUserClicksDropdownAndChoosesText(String fieldName, String text) {
+        endUser.clicksAndChooses(fieldName, text);
+        log.info(String.format("the user clicks %1$s and chooses %2$s", fieldName, text));
     }
 
-    @When("the user toggle On checkbox '$checkboxName'")
-    public void whenTheUserToggleOnCheckbox(String checkboxName) {
-        endUser.toggleOnCheckbox(checkboxName);
-        log.info(String.format("the user toggle on checkbox %s", checkboxName));
+    @When("the user toggles checkbox '$checkboxName'")
+    public void whenTheUserTogglesCheckbox(String checkboxName) {
+        endUser.togglesCheckbox(checkboxName);
+        log.info(String.format("the user toggles checkbox %s", checkboxName));
     }
 
-    @When("the user choose '$choice' for '$radioName'")
-    public void whenTheUserChooseRadioButton(String choice, String radioName) {
-        endUser.chooseRadioButton(choice, radioName);
-        log.info(String.format("the user choose %1$s for %2$s", choice, radioName));
+    @When("the user chooses '$choice' for '$radioName'")
+    public void whenTheUserChoosesRadioButton(String choice, String radioName) {
+        endUser.choosesRadioButton(choice, radioName);
+        log.info(String.format("the user chooses %1$s for %2$s", choice, radioName));
     }
 
-    @When("the user upload '$namePath' to '$nameForm' form")
+    @When("the user uploads '$namePath' to '$nameForm' form")
     public void whenTheUserUploadFile(String namePath, String nameForm) {
-        endUser.uploadFileToForm(namePath, nameForm);
-        log.info(String.format("the user upload file from %1$s to %2$s", namePath, nameForm));
+        endUser.uploadsFileToForm(namePath, nameForm);
+        log.info(String.format("the user uploads file from %1$s to %2$s", namePath, nameForm));
     }
 
-    @When("the user click on the '$buttonName' button")
-    public void whenTheUserClickOnButton(String buttonName) {
-        endUser.clickOnButton(buttonName);
-        log.info(String.format("the user click on %s button", buttonName));
+    @When("the user clicks the '$buttonName' button")
+    public void whenTheUserClicksButton(String buttonName) {
+        endUser.clicksButton(buttonName);
+        log.info(String.format("the user clicks %s button", buttonName));
     }
 
     @Then("they should see '$someText'")

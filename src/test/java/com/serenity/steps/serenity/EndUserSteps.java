@@ -28,33 +28,33 @@ public class EndUserSteps {
     }
 
     @Step
-    public void clickOnAndInput(String fieldName, String text) {
-        homePage.clickOnAndInput(fieldName, text);
+    public void clicksAndInputs(String fieldName, String text) {
+        homePage.clicksAndInputs(fieldName, text);
     }
 
     @Step
-    public void clickOnAndChoose(String dropdownName, String text) {
-        homePage.clickOnAndChoose(dropdownName, text);
+    public void clicksAndChooses(String dropdownName, String text) {
+        homePage.clicksAndChooses(dropdownName, text);
     }
 
     @Step
-    public void toggleOnCheckbox(String checkboxName) {
-        homePage.toggleOnCheckbox(checkboxName);
+    public void togglesCheckbox(String checkboxName) {
+        homePage.togglesCheckbox(checkboxName);
     }
 
     @Step
-    public void chooseRadioButton(String choice, String radioName) {
-        homePage.chooseRadioButton(choice, radioName);
+    public void choosesRadioButton(String choice, String radioName) {
+        homePage.choosesRadioButton(choice, radioName);
     }
 
     @Step
-    public void uploadFileToForm(String namePath, String nameForm)  {
-        homePage.uploadFileToForm(namePath, nameForm);
+    public void uploadsFileToForm(String namePath, String nameForm)  {
+        homePage.uploadsFileToForm(namePath, nameForm);
     }
 
     @Step
-    public void clickOnButton(String buttonName) {
-        homePage.clickButton(buttonName);
+    public void clicksButton(String buttonName) {
+        homePage.clicksButton(buttonName);
     }
 
     @Step
