@@ -1,5 +1,4 @@
 Meta:
-@current
 
 Narrative:
 As a user
@@ -14,7 +13,7 @@ When the user clicks 'email' and inputs 'automation@gmail.com'
 And the user clicks 'password' and inputs '-fXIGf'
 And the user clicks the 'Login' button
 And the user is on the Agreement Insurance Page
-And the user clicks 'Please, select advisor' and chooses 'Automation'
+!-- And the user clicks 'Please, select advisor' and chooses 'Automation'
 And the user clicks 'application_number' and inputs 'N777'
 And the user clicks 'first_name' and inputs 'John'
 And the user clicks 'last_name' and inputs 'Doe'
