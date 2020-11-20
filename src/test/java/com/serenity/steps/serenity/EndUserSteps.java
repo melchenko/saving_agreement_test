@@ -1,8 +1,6 @@
 package com.serenity.steps.serenity;
 
-import com.serenity.pages.HomePage;
-import com.serenity.pages.LoginPage;
-import com.serenity.pages.NbtInsuranceAgreementPage;
+import com.serenity.pages.*;
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
 
@@ -10,6 +8,8 @@ public class EndUserSteps {
     HomePage homePage;
     LoginPage loginPage;
     NbtInsuranceAgreementPage nbtInsuranceAgreementPage;
+    NBTPage nbtPage;
+    NbtInvestmentAgreementPage nbtInvestmentAgreementPage;
 
 
     @Step
@@ -28,6 +28,20 @@ public class EndUserSteps {
     }
 
     @Step
+    public void goToMenu(String menuName) {
+        homePage.goToMenu(menuName);
+    }
+    @Step
+    public void goToNbtSubMenu(String nbtSubMenuName) {
+        nbtPage.goToNBTSubMenu(nbtSubMenuName);
+    }
+
+    @Step
+    public void is_the_agreement_investment_page() {
+        nbtInvestmentAgreementPage.open();
+    }
+
+    @Step
     public void clicksAndInputs(String fieldName, String text) {
         homePage.clicksAndInputs(fieldName, text);
     }
@@ -35,6 +49,11 @@ public class EndUserSteps {
     @Step
     public void clicksAndChooses(String dropdownName, String text) {
         homePage.clicksAndChooses(dropdownName, text);
+    }
+
+    @Step
+    public void clicksDropdownMenuAndChooses(String dropdownName, String text) {
+        homePage.clicksDropdownMenuAndChooses(dropdownName, text);
     }
 
     @Step

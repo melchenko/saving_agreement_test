@@ -32,6 +32,27 @@ public class DefinitionSteps {
         log.info("the user is on the the user is on the Agreement Insurance Page");
     }
 
+    @Given("the user is on the Agreement Investment Page")
+    @When("the user is on the Agreement Investment Page")
+    public void givenTheUserIsOnTheAgreementInvestmentPage() {
+        endUser.is_the_agreement_investment_page();
+        log.info("the user is on the the user is on the Agreement Investment Page");
+    }
+
+    @Given("the user go to the '$menuName' menu")
+    @When("the user go to the '$menuName' menu")
+    public void whenTheUserGoToMenu(String menuName) {
+        endUser.goToMenu(menuName);
+        log.info(String.format("the user go to the %s menu", menuName));
+    }
+
+    @Given("the user go to the NBT '$subMenuName' menu")
+    @When("the user go to the NBT '$subMenuName' menu")
+    public void whenTheUserGoToNbtSubMenu(String nbtSubMenuName) {
+        endUser.goToNbtSubMenu(nbtSubMenuName);
+        log.info(String.format("the user go to the NBT %s submenu", nbtSubMenuName));
+    }
+
     @When("the user clicks '$fieldName' and inputs '$text'")
     public void whenTheUserClicksFieldAndInputsText(String fieldName, String text) {
         endUser.clicksAndInputs(fieldName, text);
@@ -39,9 +60,15 @@ public class DefinitionSteps {
     }
 
     @When("the user clicks '$fieldName' and chooses '$text'")
-    public void whenTheUserClicksDropdownAndChoosesText(String fieldName, String text) {
+    public void whenTheUserClicksAndChoosesText(String fieldName, String text) {
         endUser.clicksAndChooses(fieldName, text);
         log.info(String.format("the user clicks %1$s and chooses %2$s", fieldName, text));
+    }
+
+    @When("the user clicks '$fieldName' dropdown menu and chooses '$text'")
+    public void whenTheUserClicksDropdownAndChoosesText(String fieldName, String text) {
+        endUser.clicksDropdownMenuAndChooses(fieldName, text);
+        log.info(String.format("the user clicks %1$s dropdown menu and chooses %2$s", fieldName, text));
     }
 
     @When("the user toggles checkbox '$checkboxName'")
